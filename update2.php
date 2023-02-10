@@ -37,7 +37,7 @@
             <input class="form-control" type="text" name="P_Price" value="<?php echo $row['P_Price']; ?>">
 
             <input class="btn btn-success mt-3" type="submit" value="Update">
-            <a href="ins_form.php" class="btn btn-primary mt-3">Go Back</a>
+            <a href="ins_form2.php" class="btn btn-primary mt-3">Go Back</a>
          
         </form>
     </div>

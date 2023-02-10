@@ -2,10 +2,10 @@
 $Id = $_POST["C_Id"];
 $Name =$_POST["C_Name"];  
 $Address =$_POST["C_Address"];
-$Tel=$_POST["C_Tel"];  
+$Tel =$_POST["C_Tel"];
 
 include('connection.php');
-$sql = "UPDATE customers  SET C_Name='$Name',C_Address='$Address' , C_Tel='$Tel' WHERE C_Id='$Id'";
+$sql = "UPDATE customers  SET C_Name='$Name',C_Address='$Address',C_Tel='$Tel' WHERE C_Id='$Id'";
 if ($conn->query($sql)) {
     echo "<script>alert('Record Inserted Successfully!');</script>";
     echo "<script>window.location.href='ins_form.php'</script>";

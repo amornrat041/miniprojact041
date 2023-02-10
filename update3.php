@@ -33,8 +33,6 @@
             <label for="T_Name" class="form-label">Name</label>
             <input class="form-control" type="text" name="T_Name" value="<?php echo $row['T_Name']; ?>">
             
-           
-
             <input class="btn btn-success mt-3" type="submit" value="Update">
             <a href="ins_form3.php" class="btn btn-primary mt-3">Go Back</a>
          

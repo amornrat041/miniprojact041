@@ -3,7 +3,7 @@
     session_start();
     include('connection.php');
     $Id = $_GET['C_Id'];
-    $sql = "select * from customers where C_Id='$Id'";
+    $sql = "select * from customers  where C_Id='$Id'";
     $result = $conn->query($sql);
     
     $row;
@@ -35,13 +35,13 @@
             
             <label for="C_Address" class="form-label">Address</label>
             <input class="form-control" type="text" name="C_Address" value="<?php echo $row['C_Address']; ?>">
-            
+
             <label for="C_Tel" class="form-label">Tel</label>
             <input class="form-control" type="text" name="C_Tel" value="<?php echo $row['C_Tel']; ?>">
 
             <input class="btn btn-success mt-3" type="submit" value="Update">
-            <a href="ins_form.php" class="btn btn-primary mt-3">Go Back</a>
-         
+            <a href="ins_form2.php" class="btn btn-primary mt-3">Go Back</a>
+            
         </form>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>

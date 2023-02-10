@@ -15,12 +15,35 @@ $Password = $_POST['Password'];
 $sql="SELECT * FROM tbl_admin Where
 a_username='".$Username."' and a_pass='".$Password."' ";
 $result = mysqli_query($conn,$sql);
-if(mysqli_num_rows($result)==1){
-$row = mysqli_fetch_array($result);
-$_SESSION["a_id"] = $row["a_id"];
-$_SESSION["a_username"] = $row["a_username"];
+if(mysqli_num_rows($result)==1)
+{
+    $row = mysqli_fetch_array($result);
+    $_SESSION["a_id"] = $row["a_id"];
+    $_SESSION["a_username"] = $row["a_username"];
+    $_SESSION["a_level"] = $row["a_level"];
 
-}} //ถ้าเป็ น admin ให้กระโดดไปหน้า
+    if($_SESSION["a_level"]=="A")
+    { //ถ้าเป็ น admin ให้กระโดดไปหน้าadmin_page.php
 
-    Header("Location: index.php");
-    ?>
+        //echo "<script>alert('Error deleting record: ');</script>";
+        echo "<script>window.location.href='index.php'</script>";
+    }
+    if ($_SESSION["a_level"]=="M")
+    { //ถ้าเป็ น member ให้กระโดดไปหน้าuser_page.php
+
+        Header("Location: user_page.php");
+    }
+}
+else
+{
+    echo "<script>";
+    echo "alert(\" user หรือ password ไม่ถูกตอ้ง\");";
+    echo "window.history.back()";
+    echo "</script>";
+}
+}
+else
+{
+    Header("Location: Form_Login.php"); //user & password incorrectback to login again
+}
+?>

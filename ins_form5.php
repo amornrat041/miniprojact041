@@ -12,7 +12,7 @@
     
     <div class="container">
         <hr>
-        <h1 class="mt-2">เพิ่มข้อมูลการขาย</h1>
+        <h1 class="mt-2">เพิ่มข้อมูลการขาย <img class="span2"src="img/6.png"width="60" height="60"></h1>
         <hr>
         
 <div class="mb-2">
@@ -37,8 +37,8 @@
                 <label for="S_Total" class="form-label">Total</label>
                 <input type="text" class="form-control" name="S_Total" required>
             </div>
-            <button type="submit" class="btn btn-success mr-2">Create</button>
-            <a class="btn btn-success mr-2" href="index.php">Back</a>
+            <button type="submit" class="btn btn-outline-success mr-2">Create</button>
+            <a class="btn btn-outline-dark mr-2" href="index.php">Back</a>
             </form>
             </div>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
